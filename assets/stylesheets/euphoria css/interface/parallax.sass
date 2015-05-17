@@ -1,0 +1,95 @@
+.parallax
+  -webkit-perspective: 300px
+  perspective: 300px
+  height: 100vh
+  overflow-x: hidden
+  overflow-y: auto
+  font-size: 200%
+.parallax-group--header
+  height: 100vh
+  -webkit-transform: translateZ(-300px) scale(2)
+  transform: translateZ(-300px) scale(2)
+  background-size: 100% 100% / cover
+  
+.parallax-group
+  min-height: 90vh
+  position: relative
+  -webkit-transform-style: preserve-3d
+  transform-style: preserve-3d
+  -webkit-transition: -webkit-transform 0.5s ease 0s
+  transition: transform 0.5s ease 0s
+  &:nth-child(odd)
+    z-index: 2
+  &:nth-child(even)
+    z-index: 0
+  
+
+.parallax-layer
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  text-align: center
+  
+  &.parallax-back
+    -webkit-transform: translateZ(-300px) scale(2)
+    transform: translateZ(-300px) scale(2)
+    background-size: 100% 100% / cover
+    height: 100vh
+    
+    &.fix
+      background-image: url("http://3.bp.blogspot.com/-ck7oCUJbjL8/U3gfVP5GHiI/AAAAAAAAGvc/aB1Gu04uTVs/s1600/watchmen+01.jpg")
+      z-index: 2
+      -webkit-transform: translateZ(0)
+      transform: translateZ(0)
+
+  &.parallax-face
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+
+  h1
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translateX(-50%) translateY(-50%)
+    -ms-transform: translateX(-50%) translateY(-50%)
+    transform: translateX(-50%) translateY(-50%)
+    &.light
+      line-height: 100vh
+      background-color: rgba(255, 255, 255, 0.5)
+      width: 100%
+    &.dark
+      opacity: 0.5
+
+/*=============================================================================
+ ** Template must proceed as face and back
+ **============================================================================
+  .parallax
+    .parallax-group
+      .parallax-layer.parallax-face data-img-src="http://data.techtimes.com/data/images/full/14563/batman-arkham-knight-gamescom-5-jpg.jpg"
+        h1.light First layer front
+    .parallax-group
+      .parallax-layer.parallax-back data-img-src="http://data.techtimes.com/data/images/full/14563/batman-arkham-knight-gamescom-5-jpg.jpg"
+        h1.dark Second layer back
+      .parallax-layer.parallax-face
+    .parallax-group
+      .parallax-layer.parallax-back.fix data-img-src="http://data.techtimes.com/data/images/full/14563/batman-arkham-knight-gamescom-5-jpg.jpg"
+        h1.dark Thrird layer back
+      .parallax-layer.parallax-face.fix
+    .parallax-group
+      .parallax-layer.parallax-back data-img-src="http://data.techtimes.com/data/images/full/14563/batman-arkham-knight-gamescom-5-jpg.jpg"
+        h1.dark Second layer back
+      .parallax-layer.parallax-face
+    .parallax-group
+      .parallax-layer.parallax-back.fix data-img-src="http://data.techtimes.com/data/images/full/14563/batman-arkham-knight-gamescom-5-jpg.jpg"
+        h1.dark Thrird layer back
+      .parallax-layer.parallax-face.fix
+    .parallax-group
+      .parallax-layer.parallax-back data-img-src="http://data.techtimes.com/data/images/full/14563/batman-arkham-knight-gamescom-5-jpg.jpg"
+        h1.dark Second layer back
+      .parallax-layer.parallax-face
+    .parallax-group
+      .parallax-layer.parallax-back.fix data-img-src="http://data.techtimes.com/data/images/full/14563/batman-arkham-knight-gamescom-5-jpg.jpg"
+        h1.dark Thrird layer back
+      .parallax-layer.parallax-face.fix

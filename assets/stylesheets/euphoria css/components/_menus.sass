@@ -1,0 +1,106 @@
+/*=============================================================================
+ ** Variables
+ **==============================================================================
+//menu li border color
+$li_border_color: #dfdfdf
+//links hover color
+$link_hover_color: rgba(0, 0, 0, 0.5)
+/*======================================
+ ** Menu values 
+ **=====================================
+// menu's font
+$menu_font: 'Lora', serif, Times
+//link font size 
+$menu_font_size: 1rem
+//link padding
+$menu_link_padding: 1rem 1.5rem
+
+/*=============================================================================
+ ** DRY
+ **==============================================================================
+
+%menu_default
+  background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.95)
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 1px
+  list-style-type: none
+  +flex
+  +flex-horizontal
+  align-items: center
+  justify-content: center
+  li
+    +flex
+    align-items: center
+    justify-content: center
+    a
+      padding: $menu_link_padding
+      font-family: $menu_font
+      &:hover
+        color: $link_hover_color
+  &.bordered
+    li
+      border-right: 1px solid $li_border_color
+      
+  &.active-bottom
+    border-bottom: 2px solid #98F5FF
+  &.vertical
+    +flex-horizontal(false)
+  &.left
+    justify-content: flex-start
+  &.right
+    justify-content: flex-end
+/*=============================================================================
+ ** Mobile Menu 
+ **==============================================================================
+
+.tablet-menu
+  @extend %menu_default
+  display: none
+  a
+    font-size: $menu_font_size
+/*=============================================================================
+ ** Regular Menu
+ **==============================================================================
+ 
+.menu
+  @extend %menu_default
+      
+/*=============================================================================
+ **  Responsive
+ **==============================================================================
+ 
++tablet
+  .tablet-menu
+    width: 95%
+    margin: auto
+    +flex
+    +flex-horizontal
+    align-items: center
+    justify-content: flex-start
+    li
+      &.menu-toggle
+        z-index
+        width: 100%
+        border-bottom: 1px solid $li_border_color
+        justify-content: flex-start
+        padding: .3rem 0
+        
+      margin-right: 2%
+    a
+      padding: 1rem
+  .menu
+    display: none
+    li
+      +flex-horizontal(false)
+      width: 100%
+    &.bordered
+      li
+        border-bottom: 1px solid $li_border_color
+    
++small-tablet
+  .menu-toggle
+    margin-bottom: 1%
+  li
+    width: 47%
+  
