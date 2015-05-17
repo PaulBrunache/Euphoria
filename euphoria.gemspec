@@ -6,6 +6,8 @@ require 'euphoria/version'
 Gem::Specification.new do |spec|
   spec.name          = "euphoria"
   spec.version       = Euphoria::VERSION
+  spec.required_ruby_version = '>= 2.0'
+
   spec.authors       = ["paul brunache"]
   spec.email         = ["paulbrunache@gmail.com"]
 
@@ -18,6 +20,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+
 
   spec.add_development_dependency "bundler", "~> 1.9"
   spec.add_development_dependency "rake", "~> 10.0"
