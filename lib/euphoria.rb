@@ -1,3 +1,6 @@
+require "euphoria/version"
+
 module Euphoria
-	require "euphoria/engine"
+    class Engine < Rails::Engine
+    end
 end
