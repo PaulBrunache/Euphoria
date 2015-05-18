@@ -6,15 +6,16 @@ A lightweight css flex-grid framework to ease workflow. We hate IE
 
 Add this line to your application's Gemfile:
 
-```ruby
+```ruby 
 gem 'euphoria'
+
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it yourself by running:
 
     $ gem install euphoria
 
@@ -22,8 +23,17 @@ Or install it yourself as:
 
 TODO: 
 
-	In the application.js add //= require UI-modules
-	In the application.css add *= require load
+	## In the application.js 
+
+	add //= require UI_Modules
+
+	## In the application.css 
+
+	add *= require load
+
+## How to use ? 
+
+Hang tight coming soon
 
 ## Development
 
