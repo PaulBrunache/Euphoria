@@ -60,6 +60,30 @@ table
     &.orange
       tr:nth-child(even)
         background: $orange
+        
+.table-container
+  position: relative
+  width: 600px
+  height: 100%
+  border: 2px solid red
+  display: inline-block
+
+  table
+    float: left
+  
+  th
+    border: 1px solid black
+    padding: 10px
+  
+  td
+    border: 1px solid black
+    padding: 10px
+    margin: 0
+    white-space: nowrap
+  
+  .second-table
+    overflow: auto
+      
       
     
 /*=============================================================================
