@@ -23,7 +23,7 @@ Or install it yourself as:
 TODO: 
 
 	In the application.js add //= require UI-modules
-	In the application.js add *= require load
+	In the application.css add *= require load
 
 ## Development
 

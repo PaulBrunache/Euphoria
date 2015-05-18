@@ -1,1 +1,1 @@
-//= require UI-modules
+//= require ./UI-modules
