@@ -18,12 +18,17 @@ $menu_bg: #fff
  ** Rows 
  **============================================================================
 .row
-    @extend %default_prop
-    margin-bottom: .5%
-    &:before, &:after
+   margin: 0 auto
+   max-width: 55.55556rem
+   width: 100%
+   &:before
         content: " "
         display: table
-    
+   &:after
+        content: " "
+        display: table
+        clear: both
+        
         
 /*=============================================================================
  ** text box holder 
@@ -36,6 +41,6 @@ $menu_bg: #fff
  **============================================================================
 
 %default_prop
-    width: 100%
+    width: auto
     margin: auto
     

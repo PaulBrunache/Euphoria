@@ -66,12 +66,10 @@
     @for $i from 1 through 18
         .mobile-#{$i}
             width: $i / 18 * 100%
-    .space-m-none
+    .gap-m-none
         margin-left: 0
         margin-right: 0
 
 [class*='c-'],[class*='col-'],[class*='mobile-'],[class*='sm-tablet-'],[class*='tablet-']
     float: left
-    &:before, &:after
-        content: " "
-        display: table
+    position: relative
