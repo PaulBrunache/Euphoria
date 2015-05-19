@@ -1,6 +1,6 @@
 # Euphoria
 
-A lightweight css flex-grid framework to ease workflow. We hate IE
+A lightweight css grid framework to ease workflow. We hate IE
 
 ## Installation
 
@@ -25,11 +25,13 @@ TODO:
 
 	## In the application.js 
 
-	add //= require UI_Modules
+
+	add //= require UI_Modules before //=require_tree
 
 	## In the application.css 
 
-	add *= require load
+	add *= require load before //=require_tree as well
+
 
 ## How to use ? 
 

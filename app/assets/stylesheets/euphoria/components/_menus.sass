@@ -25,14 +25,12 @@ $menu_link_padding: 1rem 1.5rem
   text-transform: uppercase
   letter-spacing: 1px
   list-style-type: none
-  +flex
-  +flex-horizontal
-  align-items: center
-  justify-content: center
+  text-align: center
+  margin: 1% 0
+  font-size: 1rem
   li
-    +flex
-    align-items: center
-    justify-content: center
+    display: inline-block
+    text-align: center
     a
       padding: $menu_link_padding
       font-family: $menu_font
@@ -45,11 +43,8 @@ $menu_link_padding: 1rem 1.5rem
   &.active-bottom
     border-bottom: 2px solid #98F5FF
   &.vertical
-    +flex-horizontal(false)
-  &.left
-    justify-content: flex-start
-  &.right
-    justify-content: flex-end
+    display: block
+
 /*=============================================================================
  ** Mobile Menu 
  **==============================================================================
@@ -59,6 +54,19 @@ $menu_link_padding: 1rem 1.5rem
   display: none
   a
     font-size: $menu_font_size
+/*=============================================================================
+ ** Menu 
+ **============================================================================
+.menu-container
+  @extend %default_prop
+  background-color: $menu_bg
+  min-height: 50px
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16)
+  margin-bottom: 5%
+  &.fixed
+    position: fixed
+    top: 0
+    left: 0
 /*=============================================================================
  ** Regular Menu
  **==============================================================================
@@ -74,16 +82,12 @@ $menu_link_padding: 1rem 1.5rem
   .tablet-menu
     width: 95%
     margin: auto
-    +flex
-    +flex-horizontal
-    align-items: center
-    justify-content: flex-start
     li
+      display: inline-block
       &.menu-toggle
         z-index
         width: 100%
         border-bottom: 1px solid $li_border_color
-        justify-content: flex-start
         padding: .3rem 0
         
       margin-right: 2%
@@ -92,8 +96,6 @@ $menu_link_padding: 1rem 1.5rem
   .menu
     display: none
     li
-      +flex-horizontal(false)
-      width: 100%
     &.bordered
       li
         border-bottom: 1px solid $li_border_color
