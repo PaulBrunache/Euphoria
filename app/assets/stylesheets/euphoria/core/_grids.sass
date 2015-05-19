@@ -5,19 +5,22 @@
 @for $i from 1 through 18
     .c-#{$i}
         width: $i / 18 * 100%
+    .hide
+     display: none
 
 /*=============================================================================
  ** spaces 
  **============================================================================
 @for $i from 1 through 18
-    .space-l-#{$i}
+    .gap-l-#{$i}
         margin-left: $i / 18 * 100%
-    .space-r-#{$i}
+    .gap-r-#{$i}
         margin-right: $i / 18 * 100%
 
-.space-none
+.gap-none
     margin-left: 0
     margin-right: 0
+
 
 /*=============================================================================
  ** Responsive Grids 
@@ -33,9 +36,11 @@
     @for $i from 1 through 18
         .tablet-#{$i}
             width: $i / 18 * 100%
-    .space-t-none
+    .gap-t-none
         margin-left: 0
         margin-right: 0
+    .tablet-hide
+        display: none
 
 +small-tablet
     @for $i from 1 through 4
@@ -48,7 +53,7 @@
     @for $i from 1 through 18
         .sm-tablet-#{$i}
             width: $i / 18 * 100%
-    .space-sm-t-none
+    .gap-sm-t-none
         margin-left: 0
         margin-right: 0
 

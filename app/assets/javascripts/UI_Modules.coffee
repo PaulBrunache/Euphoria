@@ -4,10 +4,11 @@ $(document).on 'page:change', ->
 #######################################################################################
     $(".menu-toggle").on "click", ->
         
-        if  $(".tablet-menu .menu-toggle").hasClass("fa-bars")
-            $(".tablet-menu .menu-toggle").removeClass("fa-bars").addClass("fa-times")
+        if  $(".menu-toggle").hasClass("fa-bars")
+            $(".menu-toggle").removeClass("fa-bars").addClass("fa-times")
         else
-            $(".tablet-menu .menu-toggle").addClass("fa-bars").fadeIn().removeClass("fa-times")
+            $(".menu-toggle").addClass("fa-bars").fadeIn().removeClass("fa-times")
+            
         $(".menu").slideToggle()
 
 #on resize

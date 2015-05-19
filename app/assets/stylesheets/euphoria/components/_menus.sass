@@ -5,101 +5,152 @@
 $li_border_color: #dfdfdf
 //links hover color
 $link_hover_color: #2ECC71
+$link_hover_bg_color: #1abc9c
 /*======================================
  ** Menu values 
  **=====================================
 // menu's font
-$menu_font: 'Lora', serif, Times
+$nav_font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 //link font size 
-$menu_font_size: 1rem
+$nav_font_size: 1rem
 //link padding
-$menu_link_padding: 1rem 1.5rem
+$nav_link_padding: 1rem 1.5rem
 
-/*=============================================================================
- ** DRY
- **==============================================================================
+$nav_bg_color: #fff
 
-%menu_default
-  background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.95)
-  text-align: center
-  text-transform: uppercase
-  letter-spacing: 1px
-  list-style-type: none
-  text-align: center
-  margin: 1% 0
-  font-size: 1rem
-  li
-    display: inline-block
-    text-align: center
-    a
-      padding: $menu_link_padding
-      font-family: $menu_font
-      &:hover
-        color: $link_hover_color
-  &.bordered
-    li
-      border-right: 1px solid $li_border_color
-      
-  &.active-bottom
-    border-bottom: 2px solid #98F5FF
-  &.vertical
-    display: block
 
-/*=============================================================================
- ** Mobile Menu 
- **==============================================================================
-
-.tablet-menu
-  @extend %menu_default
-  display: none
-  a
-    font-size: $menu_font_size
-/*=============================================================================
- ** Menu 
- **============================================================================
-.menu-container
-  @extend %default_prop
-  background-color: $menu_bg
-  min-height: 50px
-  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16)
-  margin-bottom: 5%
+nav
+  background-color: $nav_bg_color
+  border: 1px solid #dedede
+  border-radius: 4px
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055)
+  color: #888
+  display: block
+  margin: .8% 0
+  overflow: hidden
+  width: 100%
+  .mobile
+    display: none
   &.fixed
     position: fixed
-    width: 100%
-
-/*=============================================================================
- ** Regular Menu
- **==============================================================================
- 
-.menu
-  @extend %menu_default
-      
-/*=============================================================================
- **  Responsive
- **==============================================================================
- 
-+tablet
-  .tablet-menu
-    width: 95%
-    margin: auto
+  ul
+    margin: 0
+    padding: 0
     li
       display: inline-block
-      &.menu-toggle
-        z-index
-        width: 100%
-        border-bottom: 1px solid $li_border_color
-        padding: .3rem 0
-        
-      margin-right: 2%
-    a
-      padding: 1rem
-  .menu
-    display: none
-    li
-    &.bordered
-      li
-        border-bottom: 1px solid $li_border_color
-    
+      list-style-type: none
+      +transition-fix(all 0.2s)
+  > ul > li
+    >
+      a > .caret
+        border-top: 4px solid #aaa
+        border-right: 4px solid transparent
+        border-left: 4px solid transparent
+        content: ""
+        display: inline-block
+        height: 0
+        width: 0
+        vertical-align: middle
+        +transition-fix(color 0.1s linear)
+      div ul > li > a > .caret
+        border-top: 4px solid #aaa
+        border-right: 4px solid transparent
+        border-left: 4px solid transparent
+        content: ""
+        display: inline-block
+        height: 0
+        width: 0
+        vertical-align: middle
+        +transition-fix(color 0.1s linear)
+        border-bottom: 4px solid transparent
+        border-top: 4px solid transparent
+        border-right: 4px solid transparent
+        border-left: 4px solid #f2f2f2
+        margin: 0 0 0 8px
+      a
+        color: #aaa
+        display: block
+        line-height: 56px
+        padding: 0 24px
+        text-decoration: none
+    &:hover
+      background-color: $link_hover_bg_color
+      > a
+        color: rgb(255, 255, 255)
+        > .caret
+          border-top-color: rgb(255, 255, 255)
+      > div
+        display: block
+        opacity: 1
+        visibility: visible
+    > div
+      ul > li
+        &:hover > a > .caret
+          border-left-color: rgb(255, 255, 255)
+        > div
+          background-color: rgb(40, 44, 47)
+          border-top: 0
+          border-radius: 0 0 4px 4px
+          box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055)
+          display: none
+          margin: 0
+          opacity: 0
+          position: absolute
+          width: 165px
+          visibility: hidden
+          +transition-fix(opacity 0.2s)
+
+          background-color: rgb(40, 44, 47)
+          border-radius: 0 4px 4px 4px
+          box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.15)
+          margin-top: -42px
+          right: -165px
+      background-color: rgb(40, 44, 47)
+      border-top: 0
+      border-radius: 0 0 4px 4px
+      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055)
+      display: none
+      margin: 0
+      opacity: 0
+      position: absolute
+      width: 165px
+      visibility: hidden
+      +transition-fix(opacity 0.2s)
+    > div ul > li
+      &:hover
+        > div
+          display: block
+          opacity: 1
+          visibility: visible
+        > a
+          background-color: $link_hover_bg_color
+      display: block
+      position: relative
+      >
+        div ul > li
+          display: block
+          position: relative
+        a, div ul > li > a
+          color: #fff
+          display: block
+          padding: 12px 24px
+          text-decoration: none
++tablet
+  nav
+    .menu
+      display: none
+    .mobile
+      display: block
+      padding: .5% 0 .5% .5%
+      .menu-toggle
+        background-color: white
+        border: none
+        +border-radius(.4)
+    &:hover
+      background-color: none
+      
+
+      
 +small-tablet
   .menu-toggle
     margin-bottom: 1%
