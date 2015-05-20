@@ -1,36 +1,60 @@
-$login_background: white
-$form_border_color: #ddd
-$sticky_label_color: black
-$sticky_label_background: #ccc
-$sticky_label_border: #ccc
-.form
-    border: 1px solid $form_border_color
-    .form-row
-        width: 100%
-        margin: 1% 0
-        margin:auto
-        input[type="radio"]
-            display: inline
-        input[type="email"], input[type="password"]
-            +border-radius(.3)
-            margin: 0 1% 
-            width: 98%
-            border: 1px solid #ddd
-            
-.login-form 
-    background: $login_background
-    border: 1px solid $form_border_color
-    margin: 1% 
+input
+  &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
+    height: 38px
+    padding: 6px 10px
+    background-color: #fff
+    border: 1px solid #D1D1D1
+    border-radius: 4px
+    box-shadow: none
+    box-sizing: border-box
 
-input[type="checkbox"]
-    display: none
-    + label span
-    display: inline-block
-    width: 19px
-    height: 19px
-    margin: -1px 4px 0 0
-    vertical-align: middle
-    background: url(check_radio_sheet.png) left top no-repeat
-    cursor: pointer
-    &:checked + label span
-        background: url(check_radio_sheet.png) -19px top no-repeat
+textarea, select
+  height: 38px
+  padding: 6px 10px
+  background-color: #fff
+  border: 1px solid #D1D1D1
+  border-radius: 4px
+  box-shadow: none
+  box-sizing: border-box
+
+
+input
+  &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+textarea
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  min-height: 65px
+  padding-top: 6px
+  padding-bottom: 6px
+
+input
+  &[type="email"]:focus, &[type="number"]:focus, &[type="search"]:focus, &[type="text"]:focus, &[type="tel"]:focus, &[type="url"]:focus, &[type="password"]:focus
+    border: 1px solid #33C3F0
+    outline: 0
+
+textarea:focus, select:focus
+  border: 1px solid #33C3F0
+  outline: 0
+
+label, legend
+  display: block
+  margin-bottom: .5rem
+  font-weight: 600
+
+fieldset
+  padding: 0
+  border-width: 0
+
+input
+  &[type="checkbox"], &[type="radio"]
+    display: inline
+
+label > .label-body
+  display: inline-block
+  margin-left: .5rem
+  font-weight: normal

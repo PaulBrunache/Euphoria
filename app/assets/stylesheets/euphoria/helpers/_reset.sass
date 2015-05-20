@@ -56,9 +56,48 @@ input[type="password"]
   line-height: 1
   padding: 1%
   
+input
+  &[type="checkbox"], &[type="radio"]
+    box-sizing: border-box
+    padding: 0
+  &[type="number"]
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+      height: auto
+  &[type="search"]
+    -webkit-appearance: textfield
+    -moz-box-sizing: content-box
+    -webkit-box-sizing: content-box
+    box-sizing: content-box
+    &::-webkit-search-cancel-button, &::-webkit-search-decoration
+      -webkit-appearance: none
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration 
+  -webkit-appearance: none
+
+
+fieldset
+  border: 1px solid #c0c0c0
+  margin: 0 2px
+  padding: 0.35rem 0.625rem 0.75rem
 
 button,input,optgroup,select,textarea 
   color: inherit
   font: inherit
   margin: 0
 
+button, html input[type="button"]
+  -webkit-appearance: button
+  cursor: pointer
+
+input
+  &[type="reset"], &[type="submit"]
+    -webkit-appearance: button
+    cursor: pointer
+
+button[disabled], html input[disabled]
+  cursor: default
+
+button::-moz-focus-inner, input::-moz-focus-inner
+  border: 0
+  padding: 0
