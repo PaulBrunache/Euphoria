@@ -1,4 +1,4 @@
 module Euphoria
-  VERSION = "0.1.4.65"
+  VERSION = "0.1.4.66"
 end
 

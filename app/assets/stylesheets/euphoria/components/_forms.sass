@@ -1,15 +1,28 @@
 $bg_color: white
+$input_border_color: #D1D1D1
+$input_focus_color: #33C3F0
+$form_border_color: #CCC
 
 .form
+    &.border
+        border: 1px solid $form_border_color
+    background-color: $bg_color
+    .button-group
+        display: inline-block
+        &.no-space
+            float: left
+    &:after
+        display: table
+        clear: both
     background-color: $bg_color
     margin: 0 auto
-
+    
     input
         &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
             height: 38px
             padding: 6px 10px
-            background-color: #fff
-            border: 1px solid #D1D1D1
+            background-color: $bg_color
+            border: 1px solid $input_border_color
             border-radius: 4px
             box-shadow: none
             box-sizing: border-box
@@ -18,49 +31,49 @@ $bg_color: white
         height: 38px
         padding: 6px 10px
         background-color: #fff
-        border: 1px solid #D1D1D1
+        border: 1px solid $input_border_color
         border-radius: 4px
         box-shadow: none
         box-sizing: border-box
 
 
     input
-      &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
-          -webkit-appearance: none
-          -moz-appearance: none
-          appearance: none
+        &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
 
     textarea
-      -webkit-appearance: none
-      -moz-appearance: none
-      appearance: none
-      min-height: 65px
-      padding-top: 6px
-      padding-bottom: 6px
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        min-height: 65px
+        padding-top: 6px
+        padding-bottom: 6px
 
     input
-      &[type="email"]:focus, &[type="number"]:focus, &[type="search"]:focus, &[type="text"]:focus, &[type="tel"]:focus, &[type="url"]:focus, &[type="password"]:focus
-      border: 1px solid #33C3F0
-      outline: 0
+        &[type="email"]:focus, &[type="number"]:focus, &[type="search"]:focus, &[type="text"]:focus, &[type="tel"]:focus, &[type="url"]:focus, &[type="password"]:focus
+            border: 1px solid $input_focus_color
+            outline: 0
 
     textarea:focus, select:focus
-      border: 1px solid #33C3F0
-      outline: 0
+        border: 1px solid $input_focus_color
+        outline: 0
 
     label, legend
-      display: block
-      margin-bottom: .5rem
-      font-weight: 600
+        display: block
+        margin-bottom: .5rem
+        font-weight: 600
 
     fieldset
-      padding: 0
-      border-width: 0
+        padding: 0
+        border-width: 0
 
     input
-      &[type="checkbox"], &[type="radio"]
-        display: inline
+        &[type="checkbox"], &[type="radio"]
+            display: inline
 
     label > .label-body
-      display: inline-block
-      margin-left: .5rem
-      font-weight: normal
+        display: inline-block
+        margin-left: .5rem
+        font-weight: normal
