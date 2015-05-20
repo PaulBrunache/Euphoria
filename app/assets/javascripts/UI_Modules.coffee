@@ -14,7 +14,7 @@ $(document).on 'page:change', ->
 #on resize
 #account for margin with fixed nav class
     $(window).resize ->
-        if $('div').hasClass('menu-container fixed')
+        if $('nav').hasClass('fixed')
             $('.start-content').css 'margin-top', $('.menu-container').height() + 10
         if $(window).width() > 1023
             $('.menu').removeAttr('style');
