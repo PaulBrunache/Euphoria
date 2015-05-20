@@ -5,7 +5,16 @@ $bg_color: white
     margin: 0 auto
 
     input
-      &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
+        &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
+            height: 38px
+            padding: 6px 10px
+            background-color: #fff
+            border: 1px solid #D1D1D1
+            border-radius: 4px
+            box-shadow: none
+            box-sizing: border-box
+
+    textarea, select
         height: 38px
         padding: 6px 10px
         background-color: #fff
@@ -14,21 +23,12 @@ $bg_color: white
         box-shadow: none
         box-sizing: border-box
 
-    textarea, select
-      height: 38px
-      padding: 6px 10px
-      background-color: #fff
-      border: 1px solid #D1D1D1
-      border-radius: 4px
-      box-shadow: none
-      box-sizing: border-box
-
 
     input
       &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
-        -webkit-appearance: none
-        -moz-appearance: none
-        appearance: none
+          -webkit-appearance: none
+          -moz-appearance: none
+          appearance: none
 
     textarea
       -webkit-appearance: none
@@ -40,8 +40,8 @@ $bg_color: white
 
     input
       &[type="email"]:focus, &[type="number"]:focus, &[type="search"]:focus, &[type="text"]:focus, &[type="tel"]:focus, &[type="url"]:focus, &[type="password"]:focus
-        border: 1px solid #33C3F0
-        outline: 0
+      border: 1px solid #33C3F0
+      outline: 0
 
     textarea:focus, select:focus
       border: 1px solid #33C3F0
