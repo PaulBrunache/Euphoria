@@ -5,7 +5,7 @@
 $li_border_color: #dfdfdf
 //links hover color
 $link_hover_color: #2ECC71
-$link_hover_bg_color: #1abc9c
+$link_hover_bg_color: rgba(46, 204, 113, 1)
 /*======================================
  ** Menu values 
  **=====================================
@@ -18,6 +18,9 @@ $nav_link_padding: 1rem 1.5rem
 
 $nav_bg_color: #fff
 
+.current
+  background-color: $link_hover_bg_color
+  color: white
 
 nav
   background-color: $nav_bg_color
