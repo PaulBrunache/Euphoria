@@ -1,23 +1,23 @@
 /*=============================================================================
- ** Grids 
+ ** Grids (keep columns seperated to add width at will)
  **============================================================================
 
+.col
+    float: left
+    position: relative
+.center
+    margin: 0 auto
+
 @for $i from 1 through 18
-    .c-#{$i}
+    .w-#{$i}
         width: $i / 18 * 100%
-
-.hide
-    display: none
-
-/*=============================================================================
- ** spaces 
- **============================================================================
-@for $i from 1 through 18
     .gap-l-#{$i}
         margin-left: $i / 18 * 100%
     .gap-r-#{$i}
         margin-right: $i / 18 * 100%
 
+.hide
+    display: none
 .gap-none
     margin-left: 0
     margin-right: 0
@@ -28,10 +28,10 @@
  **============================================================================
 +tablet 
     @for $i from 1 through 11
-        .c-#{$i}
+        .w-#{$i}
             width: 50%
     @for $i from 12 through 18
-        .c-#{$i}
+        .w-#{$i}
             width: 100%
     
     @for $i from 1 through 18
@@ -45,10 +45,10 @@
 
 +small-tablet
     @for $i from 1 through 4
-        .c-#{$i}
+        .w-#{$i}
             width: $i / 4 * 100%
     @for $i from 5 through 9
-        .c-#{$i}
+        .w-#{$i}
             width: 100% 
     
     @for $i from 1 through 18
@@ -57,10 +57,12 @@
     .gap-sm-none
         margin-left: 0
         margin-right: 0
+    .sm-tablet-hide
+        display: none
 
 +mobile 
     @for $i from 1 through 18
-        .c-#{$i}
+        .w-#{$i}
             width: 100%
     
     @for $i from 1 through 18
@@ -69,7 +71,5 @@
     .gap-m-none
         margin-left: 0
         margin-right: 0
-
-[class*='c-'],[class*='col-'],[class*='mobile-'],[class*='sm-tablet-'],[class*='tablet-']
-    float: left
-    position: relative
+    .mobile-hide
+        display: none
