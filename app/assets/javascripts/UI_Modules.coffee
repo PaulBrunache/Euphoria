@@ -2,7 +2,7 @@ $(document).on 'page:change', ->
 #######################################################################################
     #set icons for buttons
 #######################################################################################
-    $("[type='submit'").addClass 'btn green round'
+    $("[type='submit']").addClass 'btn green round'
     
     $('a').each ->
    

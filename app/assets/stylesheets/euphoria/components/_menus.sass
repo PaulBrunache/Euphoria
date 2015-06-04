@@ -19,8 +19,15 @@ $nav_link_padding: 1rem 1.5rem
 $nav_bg_color: #fff
 
 .current
-  background-color: $link_hover_bg_color
-  color: white
+    border-bottom: 2px solid darken(rgba(45,204,165,1), 10%)
+    background-color: white
+    a
+        color: darken(rgba(45,204,165,1), 5%)
+    &:hover
+        border-bottom: none     
+        -webkit-transition: none
+        -moz-transition: none
+        transition: none
 
 nav
   background-color: $nav_bg_color
