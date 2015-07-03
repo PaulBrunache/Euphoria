@@ -4,11 +4,11 @@ require 'rails/generators'
 
 module Euphoria
   class InstallGenerator < Rails::Generators::Base
-    source_root File.expand_path('../templates', __FILE__)
+    source_root File.expand_path('..', __FILE__)
 
     # get stylesheets
     def get_stylesheets
-      directory 'templates/stylesheets', 'app/assets/stylesheets/'
+      directory 'templates/stylesheets/', 'app/assets/stylesheets/'
     end
     def insert_css_and_js
         application_js_path = 'app/assets/javascripts/application.js'
