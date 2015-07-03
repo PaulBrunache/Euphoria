@@ -1,0 +1,75 @@
+/*=============================================================================
+ ** Grids (keep columns seperated to add width at will)
+ **============================================================================
+
+.col
+    float: left
+    position: relative
+.center
+    margin: 0 auto
+
+@for $i from 1 through 18
+    .w-#{$i}
+        width: $i / 18 * 100%
+    .gap-l-#{$i}
+        margin-left: $i / 18 * 100%
+    .gap-r-#{$i}
+        margin-right: $i / 18 * 100%
+
+.hide
+    display: none
+.gap-none
+    margin-left: 0
+    margin-right: 0
+
+
+/*=============================================================================
+ ** Responsive Grids 
+ **============================================================================
++tablet 
+    @for $i from 1 through 11
+        .w-#{$i}
+            width: 50%
+    @for $i from 12 through 18
+        .w-#{$i}
+            width: 100%
+    
+    @for $i from 1 through 18
+        .tablet-#{$i}
+            width: $i / 18 * 100%
+    .gap-t-none
+        margin-left: 0
+        margin-right: 0
+    .tablet-hide
+        display: none
+
++small-tablet
+    @for $i from 1 through 4
+        .w-#{$i}
+            width: $i / 4 * 100%
+    @for $i from 5 through 9
+        .w-#{$i}
+            width: 100% 
+    
+    @for $i from 1 through 18
+        .sm-tablet-#{$i}
+            width: $i / 18 * 100%
+    .gap-sm-none
+        margin-left: 0
+        margin-right: 0
+    .sm-tablet-hide
+        display: none
+
++mobile 
+    @for $i from 1 through 18
+        .w-#{$i}
+            width: 100%
+    
+    @for $i from 1 through 18
+        .mobile-#{$i}
+            width: $i / 18 * 100%
+    .gap-m-none
+        margin-left: 0
+        margin-right: 0
+    .mobile-hide
+        display: none

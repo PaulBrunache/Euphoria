@@ -1,0 +1,89 @@
+/*=============================================================================
+ ** Reusable colors
+ **============================================================================
+$green: rgba(46,204,113,0.22)
+$yellow: #FFFF66
+$red: #FF6666
+$orange: #f39c12
+$purple: #9966FF
+$gray: #ecf0f1
+
+/*=============================================================================
+ ** Variables
+ **============================================================================
+
+$th_font_color: #222222 //table font color
+$th_backg_color: $gray
+$tbl_font: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif 
+
+
+table
+  font: $tbl_font
+  border: 1px solid #ccc
+  width: 100%
+  margin: 0
+  padding: 0
+  border-collapse: collapse
+  border-spacing: 0
+  tr
+    border: 1px solid #ddd
+    padding: 5px
+  th, td
+    padding: 10px
+    text-align: center
+  th
+    text-transform: uppercase
+    letter-spacing: 1px
+    color: $th_font_color
+    background: $th_backg_color
+    font-size: 0.77778rem
+    font-weight: bold
+    padding: 0.44444rem 0.55556rem 0.55556rem
+  &.bordered
+    border-collapse: separate
+    border-spacing: 2px
+  &.alternate
+    tr:nth-child(even)
+      background: $gray
+    &.green
+      tr:nth-child(even)
+        background-color: $green
+    &.purple
+      tr:nth-child(even)
+        background: $purple
+    &.red
+      tr:nth-child(even)
+        background: $red
+    &.yellow
+      tr:nth-child(even)
+        background: $yellow
+    &.orange
+      tr:nth-child(even)
+        background: $orange
+
+      
+/*=============================================================================
+ ** Responsive Grids 
+ **============================================================================
+
++small-tablet 
+  table
+    border: 0
+    thead
+      display: none
+    tr
+      margin-bottom: 10px
+      display: block
+      border-bottom: 2px solid #ddd
+    td
+      display: block
+      text-align: right
+      font-size: 13px
+      border-bottom: 1px dotted #ccc
+      &:last-child
+        border-bottom: 0
+      &:before
+        content: attr(data-name)
+        float: left
+        text-transform: uppercase
+        font-weight: bold

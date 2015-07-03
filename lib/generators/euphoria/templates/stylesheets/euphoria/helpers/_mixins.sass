@@ -1,0 +1,97 @@
+$i_color: #ecf0f1   // icon color       
+$s_color: #12664b  // shadow color     
+$b_color: #27ae60 // background color 
+$b_radius: .5     // bg border radius 
+
+/*=============================================================================
+ ** Transform/transform
+ **============================================================================
+
+=transform-style-fix($value)
+    -webkit-transform-style: $value
+    -moz-transform-style: $value
+    -ms-transform-style: $value
+    -o-transform-style: $value
+    transform-style: $value
+    
+=transform-fix($value)
+    -moz-transform: $value
+    -o-transform: $value
+    -webkit-transform: $value
+    -ms-transform: $value
+    transform: $value
+
+=transition-fix($value)
+    -moz-transition: $value
+    -o-transition: $value
+    -webkit-transition: $value
+    -ms-transition: $value
+    transition: $value
+
+/*=============================================================================
+ ** Flex box
+ **============================================================================
+ 
+// =flex 
+//     display: -webkit-box
+//     display: -moz-box
+//     display: -ms-flexbox
+//     display: -webkit-flex    
+//     display: flex
+//     flex-flow: row wrap
+    
+// =flex-horizontal ($row: true)
+//     @if $row 
+//         -webkit-flex-direction: row
+//         flex-direction: row
+//     @else
+//         -webkit-flex-direction: column
+//         flex-direction: column
+/*=============================================================================
+ ** Rounded corners
+ **============================================================================   
+ 
+=border-radius ($bradius)  
+    -webkit-border-radius: $bradius+rem
+    -moz-border-radius: $bradius+rem
+    -ms-border-radius: $bradius+rem
+    border-radius: $bradius+rem
+    
+/*=============================================================================
+ ** Box Shawdow
+ **============================================================================
+=box-shadow($top, $left, $blur, $size, $color, $inset: false)
+    @if $inset
+        -webkit-box-shadow: inset $top $left $blur $size $color
+        -moz-box-shadow: inset $top $left $blur $size $color
+        box-shadow: inset $top $left $blur $size $color
+        -o-box-shadow: inset $top $left $blur $size $color
+    @else
+        -webkit-box-shadow: $top $left $blur $size $color
+        -moz-box-shadow: $top $left $blur $size $color
+        box-shadow: $top $left $blur $size $color
+        -o-box-shadow: inset $top $left $blur $size $color
+
+/*=============================================================================
+ ** Long Shadow Flat Design + Icon size
+ **============================================================================
+=long-shadow($scolor, $length)
+    $list: ()
+    @for $i from 1 through $length
+        $list: append($list, $scolor $i + px $i + px, comma)
+    text-shadow: $list
+
+=icon-size($length)
+    text-align: center
+    overflow: hidden
+    width: $length + px
+    height: $length + px
+    font-size: $length / 2 + px
+    line-height: $length + px
+    background-color: $b_color
+    display: inline-block
+    color: $i_color
+    +long-shadow($s_color, $length)
+    +border-radius($b_radius)
+    @if $length <= 30
+        +border-radius(.4)

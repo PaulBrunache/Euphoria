@@ -1,0 +1,78 @@
+/*=============================================================================
+ ** Variables 
+ **==============================================================================
+//Button Colors 
+$blue: #4aa3df
+$blue_hover: #3498db
+$green: #40d47e
+$green_hover: #2ecc71
+$red: #e74c3c
+$red_hover: #e43725 
+
+$white: #bdc3c7
+$white_hover: #fff
+$orange: #f5b823
+$orange_hover:  #F5A623
+
+
+/*=============================================================================
+ ** Button 
+ **==============================================================================
+.btn
+    text-align: center
+    vertical-align: middle
+    border: 1px solid #e5e6e7
+    font-weight: 400
+    font-size: .85rem
+    padding: .4rem
+    line-height: 1.375rem
+    letter-spacing: .1rem
+    text-transform: uppercase
+    text-decoration: none
+    white-space: nowrap
+    color: #fff
+    &.default
+        color: #333
+        &:hover
+            background-color: #ccc
+            color: #fff
+    &.round
+        +border-radius (.5)
+    &.sm //Button size 
+        font-size: 0.625rem 
+        line-height: 1.675rem
+    &.lg
+        font-size: 1.625rem
+        line-height: 1.675rem
+    &.xl
+        font-size: 1.875rem
+        line-height: 1.875rem
+    &.blue //button color
+        border: 1px solid #3085d6
+        background-color: $blue
+
+        &:hover
+            background: $blue_hover
+            color: white
+    &.green
+        background-color: $green
+        border: 1px solid #5bde9b
+        &:hover
+            background: $green_hover
+            color: white
+    &.red
+        border: 1px solid #c6282a
+        background-color: $red
+        &:hover
+            background: $red_hover
+            color: white
+    &.orange
+        border: 1px solid $orange
+        background-color: $orange
+        &:hover
+            background: $orange_hover
+            color: white
+    &.transparent
+        background-color: transparent
+
+            

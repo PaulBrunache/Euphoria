@@ -1,0 +1,172 @@
+/*=============================================================================
+ ** Variables
+ **==============================================================================
+//menu li border color
+$li_border_color: #dfdfdf
+//links hover color
+$link_hover_color: #2ECC71
+$link_hover_bg_color: rgba(46, 204, 113, 1)
+/*======================================
+ ** Menu values 
+ **=====================================
+// menu's font
+$nav_font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+//link font size 
+$nav_font_size: 1rem
+//link padding
+$nav_link_padding: 1rem 1.5rem
+
+$nav_bg_color: #fff
+
+.current
+  border-bottom: 2px solid darken(rgba(45,204,165,1), 10%)
+  background-color: white
+  &:hover
+    border-bottom: none     
+    -webkit-transition: none
+    -moz-transition: none
+    transition: none
+  a
+    color: darken(rgba(45,204,165,1), 5%)
+  
+nav
+  background-color: $nav_bg_color
+  border: 1px solid #dedede
+  border-radius: 4px
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055)
+  color: #2a2a2a
+  display: block
+  overflow: hidden
+  width: 100%
+  font-size: 1rem
+  .mobile
+    display: none
+  &.fixed
+    position: fixed
+    top: 0
+    z-index: 2
+  ul
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
+      list-style-type: none
+      +transition-fix(all 0.2s)
+  > ul > li
+    >
+      a > .caret
+        border-top: 4px solid #aaa
+        border-right: 4px solid transparent
+        border-left: 4px solid transparent
+        content: ""
+        display: inline-block
+        height: 0
+        width: 0
+        vertical-align: middle
+        +transition-fix(color 0.1s linear)
+      div ul > li > a > .caret
+        border-top: 4px solid #aaa
+        border-right: 4px solid transparent
+        border-left: 4px solid transparent
+        content: ""
+        display: inline-block
+        height: 0
+        width: 0
+        vertical-align: middle
+        +transition-fix(color 0.1s linear)
+        border-bottom: 4px solid transparent
+        border-top: 4px solid transparent
+        border-right: 4px solid transparent
+        border-left: 4px solid #f2f2f2
+        margin: 0 0 0 8px
+      a
+        color: #2a2a2a
+        display: block
+        line-height: 3.5rem
+        padding: 0 1.6rem
+        text-decoration: none
+        font-size: inherit
+    &:hover
+      background-color: $link_hover_bg_color
+      > a
+        color: rgb(255, 255, 255)
+        > .caret
+          border-top-color: rgb(255, 255, 255)
+      > div
+        display: block
+        opacity: 1
+        visibility: visible
+    > div
+      ul > li
+        &:hover > a > .caret
+          border-left-color: rgb(255, 255, 255)
+        > div
+          background-color: rgb(40, 44, 47)
+          border-top: 0
+          border-radius: 0 0 4px 4px
+          box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055)
+          display: none
+          margin: 0
+          opacity: 0
+          position: absolute
+          width: 165px
+          visibility: hidden
+          +transition-fix(opacity 0.2s)
+
+          background-color: rgb(40, 44, 47)
+          border-radius: 0 4px 4px 4px
+          box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.15)
+          margin-top: -42px
+          right: -165px
+      background-color: rgb(40, 44, 47)
+      border-top: 0
+      border-radius: 0 0 4px 4px
+      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055)
+      display: none
+      margin: 0
+      opacity: 0
+      position: absolute
+      width: 165px
+      visibility: hidden
+      +transition-fix(opacity 0.2s)
+    > div ul > li
+      &:hover
+        > div
+          display: block
+          opacity: 1
+          visibility: visible
+        > a
+          background-color: $link_hover_bg_color
+      display: block
+      position: relative
+      >
+        div ul > li
+          display: block
+          position: relative
+        a, div ul > li > a
+          color: #fff
+          display: block
+          padding: .8rem 1.6rem
+          text-decoration: none
++tablet
+  nav
+    font-size: 1.2rem 
+    .menu
+      display: none
+    .mobile
+      display: block
+      padding: .5% 0 .5% .5%
+      .menu-toggle
+        background-color: white
+        border: none
+        +border-radius(.4)
+    &:hover
+      background-color: none
+      
+
+      
++small-tablet
+  .menu-toggle
+    margin-bottom: 1%
+  li
+    width: 47%
