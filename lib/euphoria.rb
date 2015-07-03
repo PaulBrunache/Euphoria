@@ -1,4 +1,4 @@
-require "euphoria/version"
+require "rails"
 
 module Euphoria
     class Engine < Rails::Engine
