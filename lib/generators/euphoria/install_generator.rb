@@ -1,7 +1,7 @@
 require 'rails/generators'
 
 
-module euphoria
+module Euphoria
   class StylesGenerator < Rails::Generators::Base
     source_root File.expand_path('..', __FILE__)
 
