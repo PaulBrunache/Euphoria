@@ -20,7 +20,7 @@ module Euphoria
           end
         end
         if ::File.exists?(::File.join(destination_root, application_css_path))
-            inject_into_file application_js_path, before: '//= require_tree' do
+            inject_into_file application_css_path, before: '//= require_tree' do
               "//= require load\n"
             end
         end
