@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["paul brunache"]
   spec.email         = ["paulbrunache@gmail.com"]
 
-  spec.summary       = %q{Yet another grid framework for the web built with components from flexbox}
+  spec.summary       = %q{Custom sass templating framework for rails}
 
   spec.homepage      = "https://github.com/PaulBrunache/Euphoria"
   spec.license       = "MIT"
@@ -23,9 +23,9 @@ Gem::Specification.new do |spec|
 
 
   spec.add_runtime_dependency "sass-rails", "~> 5.0.1"
+  spec.add_runtime_dependency "font-awesome-rails", "~> 4.3.0.0"
+  spec.add_runtime_dependency "coffee-rails", "~> 4.1.0"
     
-  spec.add_development_dependency "bundler", "~> 1.9"
+  spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "coffee-rails", "~> 4.1.0"
-  spec.add_development_dependency "font-awesome-rails", "~> 4.3.0.0"
 end
