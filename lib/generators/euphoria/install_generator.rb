@@ -1,7 +1,7 @@
 require 'rails/generators'
 
 
-module Euphoria
+Class Euphoria
   class InstallGenerator < Rails::Generators::Base
     source_root File.expand_path('..', __FILE__)
 
@@ -12,7 +12,7 @@ module Euphoria
     def insert_css_and_js
         application_js_path = 'app/assets/javascripts/application.js'
         application_css_path ='app/assets/stylesheets/application.css'
-
+      
         if ::File.exists?(::File.join(destination_root, application_js_path))
           inject_into_file application_js_path, before: '//= require_tree' do
             "//= require UI_Modules\n"
@@ -26,3 +26,4 @@ module Euphoria
     end
   end
 end
+  
