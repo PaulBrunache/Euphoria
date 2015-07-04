@@ -9,11 +9,11 @@ module Euphoria
     class_option :js, :type => :boolean, default: false
     class_option :all, :type => :boolean, default: false
     def install
-      if(option[:stylesheet])
+      if(options[:stylesheet])
         copy_styles
-      elsif (option[:js])
+      elsif (options[:js])
         copy_js
-      elsif (option[:all])
+      elsif (options[:all])
         install_all
       else
         inject_css_and_js
