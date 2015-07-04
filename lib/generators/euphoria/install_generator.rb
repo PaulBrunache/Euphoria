@@ -21,10 +21,10 @@ module Euphoria
     end #end install method
     private
       def copy_js
-        directory 'templates/stylesheets/', 'app/assets/stylesheets/'
+        directory 'templates/javascripts/', 'app/assets/javascripts/'
       end #end copy JS
       def copy_styles
-        directory 'templates/javascripts/', 'app/assets/javascripts/'
+        directory 'templates/stylesheets/', 'app/assets/stylesheets/'
       end #end copy styles
     
       def inject_css_and_js
@@ -44,7 +44,7 @@ module Euphoria
       def install_all
         copy_styles
         copy_js
-        insert_css_and_js
+        inject_css_and_js
       end
   end #end Class Install Generator
 end #end Module
