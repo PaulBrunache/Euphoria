@@ -2,13 +2,15 @@ require 'rails/generators'
 
 module Euphoria
   class InstallGenerator < Rails::Generators::Base
-    long_desc "This generator creates all source files used for this framework
-\n Running euphoria:install with no arguments will inject the backbone of the framework in to the application.css as well as the application.js"
+    desc 
+      This generator creates all source files used for this framework
+      Running euphoria:install with no arguments will inject the backbone of the framework in to the application.css as well as         the application.js
+      
     source_root File.expand_path('..', __FILE__)
     
-    class_option :stylesheet, :type => :boolean, default: false, banner: "generates all stylesheets source files used in the framework"
-    class_option :js, :type => :boolean, default: false, banner: "generates all Javascript source files used in the framework"
-    class_option :all, :type => :boolean, default: false, banner: "generates all source files used in the framework"
+        class_option :stylesheet, :type => :boolean, default: false, desc: "generates all stylesheets source files used in the framework"
+        class_option :js, :type => :boolean, default: false, desc: "generates all Javascript source files used in the framework"
+        class_option :all, :type => :boolean, default: false, desc: "generates all source files used in the framework"
     def install
       if(options[:stylesheet])
         copy_styles
