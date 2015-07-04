@@ -6,8 +6,8 @@ module Euphoria
     source_root File.expand_path('..', __FILE__)
     
     option :stylesheet, type: boolean, default: false
-    option :js, type: :boolean, default: false
-    option :all, type: :boolean, default: false
+    option :js, :type => :boolean, default: false
+    option :all, :type => :boolean, default: false
     def install
       if(option[:stylesheet])
         copy_styles
