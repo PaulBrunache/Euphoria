@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "sass-rails", "~> 5.0.1"
   spec.add_runtime_dependency "font-awesome-rails", "~> 4.3.0.0"
   spec.add_runtime_dependency "coffee-rails", "~> 4.1.0"
+  spec.add_runtime_dependency "sass-rails", "~> 5.0"
     
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
