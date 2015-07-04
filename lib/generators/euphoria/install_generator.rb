@@ -5,7 +5,7 @@ module Euphoria
     desc "This generator creates all source files used for this framework"
     source_root File.expand_path('..', __FILE__)
     
-    option :stylesheet, type:boolean, default: false
+    option :stylesheet, :type => :boolean, default: false
     option :js, :type => :boolean, default: false
     option :all, :type => :boolean, default: false
     def install
