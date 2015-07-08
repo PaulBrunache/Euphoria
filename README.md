@@ -23,19 +23,26 @@ Or install it yourself by running:
 
 TODO: 
 
-### Getting started
+#### Getting started
 
     rails g euphoria:install 
     
-    ** will inject the css and js into the rails asset pipeline **
+    -will inject the css and js into the rails asset pipeline **
     
-### optional flags 
+#### Optional flags 
     
     --stylesheet  # generates all stylesheets source files used in the framework
     --js          # generates all Javascript source files used in the framework
     --all         # generates all source files used in the framework
 
-
+#### Manual install
+    ##### In the application.css 
+    
+    //= require UI_Modules before //=require_tree	
+    
+  	##### In the application.css 		
+    
+ 	add *= require load before //=require_tree
 
 ## How to use ? 
 
