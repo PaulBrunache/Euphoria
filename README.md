@@ -13,7 +13,7 @@ gem 'euphoria'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself by running:
 
@@ -23,11 +23,14 @@ Or install it yourself by running:
 
 TODO: 
 
-	## Commands
+### Getting started
 
-    rails g euphoria:install - will inject the css and js into the rails asset pipeline
+    rails g euphoria:install 
     
-    ###flags
+    ** will inject the css and js into the rails asset pipeline **
+    
+### optional flags 
+    
     --stylesheet  # generates all stylesheets source files used in the framework
     --js          # generates all Javascript source files used in the framework
     --all         # generates all source files used in the framework
