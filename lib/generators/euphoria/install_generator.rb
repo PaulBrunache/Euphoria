@@ -4,10 +4,11 @@ module Euphoria
   class InstallGenerator < Rails::Generators::Base
     source_root File.expand_path('..', __FILE__)
     
-    class_option :stylesheet, :type => :boolean, default: false, desc: "generates all stylesheets source files used in the framework"
-    class_option :js, :type => :boolean, default: false, desc: "generates all Javascript source files used in the framework"
-    class_option :all, :type => :boolean, default: false, desc: "generates all source files used in the framework"
+    class_option :stylesheet, :type => :boolean, default: false, desc: "generates all stylesheets "
+    class_option :js, :type => :boolean, default: false, desc: "generates all Javascript source files"
+    class_option :all, :type => :boolean, default: false, desc: "generates both js and css files "
     
+    desc "by default running rails g euphoria:install with no arguments will simply inject the css and JS files required"
     def install
       if(options[:stylesheet])
         copy_styles
