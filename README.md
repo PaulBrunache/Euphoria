@@ -36,11 +36,11 @@ TODO:
     --all         # generates all source files used in the framework
 
 #### Manual install
-    ##### In the application.css 
+    In the application.css 
     
     //= require UI_Modules before //=require_tree	
     
-  	##### In the application.css 		
+    In the application.css 		
     
  	add *= require load before //=require_tree
 
