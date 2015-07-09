@@ -1,65 +1,84 @@
 /*=============================================================================
  ** Reusable colors
  **============================================================================
-$green: rgba(46,204,113,0.22)
-$yellow: #FFFF66
-$red: #FF6666
-$orange: #f39c12
-$purple: #9966FF
-$gray: #ecf0f1
+$table_alternate_green: rgba(46,204,113,0.22)
+$table_alternate_yellow: #FFFF66
+$table_alternate_red: #FF6666
+$table_alternate_orange: #f39c12
+$table_alternate_purple: #9966FF
+$table_alternate_gray: #ecf0f1
 
 /*=============================================================================
  ** Variables
  **============================================================================
+$table_font: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif 
+$table_border: 1px solid #ccc
+$table_width: 100%
+$table_margin: 0
+$table_padding: 0
+$table_border_spacing: 0
+$table_border_collapse: collapse
+//this applies to the table class bordered
+$table_bordered_b_collapse: separate
+$table_bordered_b_spacing: 2px
 
+$tr_border: 1px solid #ddd
+$tr_padding: 5px
+
+$th_tr_padding: 10px
+
+$th_text_transform: uppercase
+$th_letter_spacing: 1px
 $th_font_color: #222222 //table font color
-$th_backg_color: $gray
-$tbl_font: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif 
+$th_background_color: $gray
+$th_font_size: 0.77778rem
+$th_font_weight: bold
+$th_padding: 0.44444rem 0.55556rem 0.55556rem
 
 
 table
-  font: $tbl_font
-  border: 1px solid #ccc
-  width: 100%
-  margin: 0
-  padding: 0
+  font: $table_font
+  border: $table_border
+  width: $table_width
+  margin: $table_margin
+  padding: $table_padding
   border-collapse: collapse
-  border-spacing: 0
+  border-spacing: $table_border_spacing
   tr
-    border: 1px solid #ddd
-    padding: 5px
+    border: $tr_border
+    padding: $tr_padding
   th, td
-    padding: 10px
+    padding: $th_tr_padding
     text-align: center
   th
-    text-transform: uppercase
-    letter-spacing: 1px
+    text-transform: $th_text_transform
+    letter-spacing: $th_letter_spacing
     color: $th_font_color
-    background: $th_backg_color
-    font-size: 0.77778rem
-    font-weight: bold
-    padding: 0.44444rem 0.55556rem 0.55556rem
+    background: $th_background_color
+    font-size: $th_font_size
+    font-weight: $th_font_weight
+    padding: $th_padding
   &.bordered
-    border-collapse: separate
-    border-spacing: 2px
+    border-collapse: $table_bordered_b_collapse
+    border-spacing: $table_bordered_b_spacing
   &.alternate
     tr:nth-child(even)
-      background: $gray
+      background: $table_alternate_gray
     &.green
       tr:nth-child(even)
-        background-color: $green
+        background-color: $table_alternate_green
     &.purple
       tr:nth-child(even)
-        background: $purple
+        background: $table_alternate_purple
     &.red
       tr:nth-child(even)
-        background: $red
+        background: $table_alternate_red
     &.yellow
       tr:nth-child(even)
-        background: $yellow
+        background: $table_alternate_yellow
     &.orange
       tr:nth-child(even)
-        background: $orange
+        background: $table_alternate_orange
 
       
 /*=============================================================================

@@ -1,42 +1,59 @@
 /*=============================================================================
+ ** Variables 
+ **============================================================================
+
+//content box 
+$content_box_padding: 1.5%
+
+//container
+$site_container_max_width: 90rem
+
+//rows
+$row_max_width: 55.55556rem 
+$row_width: 100%
+
+/*=============================================================================
  ** Main container 
  **============================================================================
+
 .site-container
-    max-width: 90rem
-    @extend %default_prop
+  max-width: $site_container_max_width:
+  @extend %default_prop
 
 //mostly used if you have a fixed navbar 
 .start-content
-    @extend %default_prop
-    overflow: hidden
+  @extend %default_prop
+  overflow: hidden
 
 /*=============================================================================
  ** Rows 
  **============================================================================
+
 .row
-    margin: 0 auto
-    max-width: 55.55556rem
-    width: 100%
-    &:before
-        content: " "
-        display: table
-    &:after
-        content: " "
-        display: table
-        clear: both
+  margin: 0 auto
+  max-width: $row_max_width  
+  width: $row_width
+  &:before
+    content: " "
+    display: table
+  &:after
+    content: " "
+    display: table
+    clear: both
         
         
 /*=============================================================================
  ** text box holder 
  **============================================================================
+
 .content-box
-    padding: 1.5%
+  padding: $content_box_padding
     
 /*=============================================================================
  ** DRY 
  **============================================================================
 
 %default_prop
-    width: auto
-    margin: auto
+  width: auto
+  margin: auto
     
