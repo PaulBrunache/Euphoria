@@ -1,6 +1,26 @@
-# Euphoria
+  _  /)
+                 mo / )
+                 |/)\)
+                  /\_
+                  \__|=
+                 (    )
+                 __)(__
+           _____/      \\_____
+          |  _     ___   _   ||
+          | | \     |   | \  ||
+          | |  |    |   |  | ||
+          | |_/     |   |_/  ||
+          | | \     |   |    ||
+          | |  \    |   |    ||
+          | |   \. _|_. | .  ||
+          |                  ||
+          | Euphoria Project ||
+          |                  ||
+  *       | *   **    * **   |**      **
+   \))ejm97/.,(//,,..,,\||(,,.,\\,.((//
 
-A lightweight css grid framework to ease workflow. We hate IE
+# Euphoria (discontinued for now at least)
+
 
 ## Installation
 
