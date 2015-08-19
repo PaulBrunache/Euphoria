@@ -46,7 +46,7 @@ TODO:
 
 ## How to use ? 
 
-Framework docs comming soon
+This was a personal framework, if I decide to pick this project up again library will be created
 
 ## Development
 
