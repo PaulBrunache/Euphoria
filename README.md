@@ -1,5 +1,5 @@
 
-# Euphoria (discontinued for now at least)
+# Caution: Euphoria (discontinued for now at least)
 
 
 ## Installation
